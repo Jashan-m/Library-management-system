@@ -21,7 +21,7 @@ if(a.lower()=="yes"):
         print(book)
 b=input("Do you want to remove any book:")
 if(b.upper()=="YES"):
-    print("Remove th book by:","\n","1. Serial Number","\n",
+    print("Remove th book by:","\n","1.Serial Number","\n",
           "2.Book Title","\n","3.Author's Name")
     c=int(input("Enter your choice:"))
     if(c==1):
@@ -32,9 +32,19 @@ if(b.upper()=="YES"):
         for book in all_books:
             print(book)
     elif (c==2):
+        d=input("Enter the title of book:")
+        library=[book for book in library if book[1]!=d]
+        all_books = library
+        print("All Books:")
+        for book in all_books:
+            print(book)
     elif(c==3):
+        d=input("Enter the author of book:")
+        library=[book for book in library if book[2]!=d]
+        all_books = library
+        print("All Books:")
+        for book in all_books:
+            print(book)
     else:
+        print("Thank you")
         
-'''
-library.append(("A005", "The Hunger Games", "Suzanne Collins"))
-library = [book for book in library if book[0]!= "A002" ]'''
